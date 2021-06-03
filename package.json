@@ -8,13 +8,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/224137748/cli-template.git"
+    "url": ""
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/224137748/cli-template/issues"
-  },
-  "homepage": "https://github.com/224137748/cli-template#readme"
+  "homepage": ""
 }

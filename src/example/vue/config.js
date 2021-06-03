@@ -4,4 +4,4 @@ module.exports = {
   keyword: '',
   script: [],
   frame: 'vue'
-}
+};
