@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Findream Team</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
+
+    .main {
+      max-width: 750px;
+      margin: 40px auto;
+    }
+
+    .tit {
+      text-align: center;
+    }
+
+    ul,
+    li {
+      list-style: none;
+    }
+
+    .developer-list {
+      display: flex;
+      margin-top: 20px;
+      padding: 30px;
+    }
+
+    .developer-item {
+      width: 40%;
+      height: 40px;
+      line-height: 40px;
+      border: 1px solid;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    .developer-item:not(.developer-item:nth-child(2n)) {
+      margin-right: 20%;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h1 class="tit">张三开发的项目</h1>
+    <ul class="developer-list">
+      <li class="developer-item">
+        <a href="/example/vue" title="/example/vue">vue项目</a>
+        <span>路径：example/vue</span>
+      </li>
+      <li class="developer-item">
+        <a href="/example/618" title="/example/618">618</a>
+        <span>描述：**商城618活动</span>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</html>
