@@ -1,5 +1,5 @@
 {
-  "name": "app-test",
+  "name": "cli-template",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -32,12 +32,13 @@
     "autoprefixer": "^10.2.6",
     "babel-loader": "^8.2.2",
     "css-loader": "^5.2.6",
+    "eslint": "^7.28.0",
     "file-loader": "^6.2.0",
     "html-widthsource-loader": "^1.0.0",
-    "html-withimg-loader": "^0.1.16",
     "less": "^4.1.1",
     "less-loader": "^7.3.0",
     "postcss-loader": "^4.2.0",
+    "prettier": "^2.3.1",
     "style-loader": "^2.0.0",
     "url-loader": "^4.1.1",
     "vue-loader": "16.0.0-beta.4"

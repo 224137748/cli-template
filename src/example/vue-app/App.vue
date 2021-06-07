@@ -96,6 +96,7 @@ section {
   padding-left: 20px;
   list-style: none;
 }
+
 .index {
   display: inline-block;
   min-width: 20px;
