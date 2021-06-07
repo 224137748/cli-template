@@ -28,43 +28,71 @@
 
     <hr />
     <section>
-      <h2>{{ count }}</h2>
-      <button @click="handleClick">按钮</button>
+      <div>
+        <h2>Vuex计数器:{{ count }}</h2>
+        <button @click="handleClick">按钮</button>
+      </div>
+      <div>
+        <h2>router</h2>
+        <router-link class="link-btn" to="/" tag="a">home</router-link>
+        <router-link class="link-btn" to="/detail" tag="a">datail</router-link>
+        <div class="router-wrap">
+          <router-view />
+        </div>
+      </div>
     </section>
   </div>
 </template>
 
 <script>
-import { ref, reactive, toRefs } from "vue";
+import { reactive, toRefs, computed } from "vue";
+import { useStore } from "vuex";
 import axios from "axios";
 import HelloWorld from "./components/HelloWorld.vue";
+
+/** vuex示例 */
+function vuexExample() {
+  const store = useStore();
+  const count = computed(() => store.state.count);
+  const handleClick = () => {
+    // console.log(33);
+    store.commit("UPDATE_COUNT");
+  };
+
+  return { handleClick, count };
+}
+
+/** axiso 示例 */
+function axiosExample() {
+  const state = reactive({
+    keywords: "",
+    list: [],
+  });
+  const handleSearch = async () => {
+    const value = state.keywords;
+    if (value) {
+      const { data: res } = await axios.get(`/api/search?keywords=${value}`);
+      if (res?.result && res?.result?.songs) {
+        state.list = res.result.songs || [];
+      }
+    } else {
+      state.list = [];
+    }
+  };
+  return {
+    state,
+    handleSearch,
+  };
+}
+
 export default {
   name: "app",
   components: {
     HelloWorld,
   },
   setup: () => {
-    const count = ref(0);
-    const state = reactive({
-      keywords: "",
-      list: [],
-    });
-
-    const handleClick = () => {
-      count.value++;
-    };
-
-    const handleSearch = async () => {
-      const value = state.keywords;
-      if (value) {
-        const { data: res } = await axios.get(`/api/search?keywords=${value}`);
-        if (res?.result && res?.result?.songs) {
-          state.list = res.result.songs || [];
-        }
-      } else {
-        state.list = [];
-      }
-    };
+    const { count, handleClick } = vuexExample();
+    const { state, handleSearch } = axiosExample();
 
     return {
       count,
@@ -82,7 +110,7 @@ export default {
   margin: 0;
 }
 section {
-  min-height: 400px;
+  min-height: 300px;
   padding: 20px;
 }
 .search-input {
@@ -102,5 +130,13 @@ section {
   min-width: 20px;
   text-align: center;
   margin-right: 10px;
+}
+.link-btn {
+  margin: 20px;
+}
+.router-wrap {
+  padding: 20px;
+  border: 1px solid;
+  margin-top: 10px;
 }
 </style>

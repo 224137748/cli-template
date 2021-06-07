@@ -1,0 +1,49 @@
+{
+	"env": {
+		"browser": true,
+		"es2021": true
+	},
+	"extends": [
+		"react-app",
+		"eslint:recommended",
+		"plugin:react/recommended",
+		"plugin:vue/essential",
+		"plugin:@typescript-eslint/recommended",
+		"plugin:vue/vue3-essential",
+		"@vue/typescript/recommended",
+		"@vue/standard",
+		"@vue/prettier/@typescript-eslint"
+	],
+	"parser": "@typescript-eslint/parser",
+	"parserOptions": {
+		"ecmaFeatures": {
+			"jsx": true
+		},
+		"ecmaVersion": 12,
+		"sourceType": "module",
+		"parser": "@typescript-eslint/parser"
+	},
+	"plugins": [
+		"react",
+		"vue",
+		"@typescript-eslint"
+	],
+	"settings": {
+		"import/resolver": {
+			"node": {
+				"extensions": [
+					".tsx",
+					".ts",
+					".js",
+					".json"
+				]
+			}
+		}
+	},
+	"rules": {
+		"@typescript-eslint/explicit-module-boundary-types": {
+			"allowExpressions": true
+		},
+		"vue/no-multiple-template-root": "off"
+	}
+}
