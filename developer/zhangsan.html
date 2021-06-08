@@ -32,31 +32,41 @@
     }
 
     .developer-item {
-      width: 40%;
-      height: 40px;
-      line-height: 40px;
-      border: 1px solid;
+      width: 47.5%;
+      margin-bottom: 20px;
+    }
+
+    .developer-item a {
+      position: relative;
+      display: block;
+      height: 32px;
+      padding: 4px 15px;
+      color: #fff;
+      background: #1890ff;
+      text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+      line-height: 32px;
+      box-shadow: 0 2px #0000000b;
+      white-space: nowrap;
       text-align: center;
-      font-size: 18px;
+      border-radius: 2px;
+      text-decoration: none;
     }
 
     .developer-item:not(.developer-item:nth-child(2n)) {
-      margin-right: 20%;
+      margin-right: 5%;
     }
   </style>
 </head>
 
 <body>
   <div class="main">
-    <h1 class="tit">张三开发的项目</h1>
+    <h1 class="tit">张富贵开发的项目</h1>
     <ul class="developer-list">
       <li class="developer-item">
-        <a href="/example/vue" title="/example/vue">vue项目</a>
-        <span>路径：example/vue</span>
+        <a href="/example/vue-app" title="/example/vue">vue3+vuex+router</a>
       </li>
       <li class="developer-item">
-        <a href="/example/618" title="/example/618">618 (jquery)</a>
-        <span>描述：**商城618活动</span>
+        <a href="/example/mini-app" title="/example/618">清明节踏春demo</a>
       </li>
     </ul>
   </div>

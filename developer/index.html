@@ -13,6 +13,7 @@
 
     .main {
       max-width: 750px;
+      min-width: 400px;
       margin: 40px auto;
     }
 
@@ -27,21 +28,34 @@
 
     .developer-list {
       display: flex;
+      flex-wrap: wrap;
       margin-top: 20px;
       padding: 30px;
     }
 
     .developer-item {
       width: 40%;
-      height: 40px;
-      line-height: 40px;
-      border: 1px solid;
+      margin-bottom: 20px;
+    }
+
+    .developer-item a {
+      position: relative;
+      display: block;
+      height: 32px;
+      padding: 4px 15px;
+      color: #fff;
+      background: #1890ff;
+      text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+      line-height: 32px;
+      box-shadow: 0 2px #0000000b;
+      white-space: nowrap;
       text-align: center;
-      font-size: 18px;
+      border-radius: 2px;
+      text-decoration: none;
     }
 
     .developer-item:not(.developer-item:nth-child(2n)) {
-      margin-right: 20%;
+      margin-right: 10%;
     }
   </style>
 </head>
@@ -51,10 +65,13 @@
     <h1 class="tit">开发成员列表</h1>
     <ul class="developer-list">
       <li class="developer-item">
-        <a href="./zhangsan.html"></a>
+        <a href="/zhangsan.html">张富贵</a>
       </li>
       <li class="developer-item">
-        <a href="./wangergou.html">王二狗</a>
+        <a href="/wangergou.html">李暴富</a>
+      </li>
+      <li class="developer-item">
+        <a href="">and more</a>
       </li>
     </ul>
   </div>
