@@ -3,6 +3,7 @@
     <hello-world :msg="'你好啊，李银河！'" />
     <section>
       <div>
+        <h4>接口请求示例：</h4>
         <input
           class="search-input"
           type="text"
@@ -28,12 +29,15 @@
 
     <hr />
     <section>
-      <div>
-        <h2>Vuex计数器:{{ count }}</h2>
-        <button @click="handleClick">按钮</button>
+      <div class="plugin">
+        <h4>Vuex示例：</h4>
+        <p>
+          计数器:{{ count }}
+          <button @click="handleClick">add count</button>
+        </p>
       </div>
-      <div>
-        <h2>router</h2>
+      <div class="plugin">
+        <h4>Vue-router示例：</h4>
         <router-link class="link-btn" to="/" tag="a">home</router-link>
         <router-link class="link-btn" to="/detail" tag="a">datail</router-link>
         <div class="router-wrap">
@@ -105,12 +109,19 @@ export default {
 </script>
 
 <style lang="less">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 * {
   padding: 0;
   margin: 0;
 }
 section {
-  min-height: 300px;
   padding: 20px;
 }
 .search-input {
@@ -119,10 +130,16 @@ section {
   padding: 0 6px;
   outline: none;
 }
+.song-list {
+  width: 280px;
+  margin: 0 auto;
+  text-align: left;
+}
 .song-item {
   line-height: 26px;
   padding-left: 20px;
   list-style: none;
+  white-space: nowrap;
 }
 
 .index {
@@ -135,8 +152,14 @@ section {
   margin: 20px;
 }
 .router-wrap {
+  width: 500px;
+  margin: 20px auto;
   padding: 20px;
   border: 1px solid;
   margin-top: 10px;
 }
+.plugin {
+  margin-top: 30px;
+}
+
 </style>

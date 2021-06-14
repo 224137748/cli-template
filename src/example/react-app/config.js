@@ -1,25 +1,27 @@
-
 module.exports = {
   frame: 'react',
 
   // document.title
-  title: 'react-app',
+  title: 'react-app-example',
 
-  // meta: description
-  description: 'react-test-demo',
+  meta: {
+    // meta: description
+    description: '',
+    // meta: keyword
+    keyword: ''
+    // viewport等
+  },
 
-  // meta: keyword
-  keyword: '',
+  // 配置生产路径，只在打包项目时生效，默认值 /
+  publicPath: '/'
 
-  // 引入外部js资源
-  script: [],
-
-  // 配置代理
+  // 配置代理 详情参照 [https://github.com/chimurai/http-proxy-middleware#options]
   // proxy: {
   //   "/api": {
-  //     target: "http://localhost:3000",
-  //     pathRewrite: {"^/api" : ""}
+  //     target: "http://findream.vip",
+  //     pathRewrite: {"^/api" : "/api/music"},
+  //     changeOrigin:true,
+  //     secure: true
   //   }
   // }
-}
-  
+};
